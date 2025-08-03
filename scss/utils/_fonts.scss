@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'BluuNextCyrillic';
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+    src: url('../fonts/Bluu Next Cyrillic.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-weight: 400;
+  src: url('../fonts/inter-v19-cyrillic_latin-regular.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-weight: 500;
+  src: url('../fonts/inter-v19-cyrillic_latin-500.woff2') format('woff2'); 
+}

@@ -2,3 +2,13 @@
 @import './utils/variables';
 
 @import './base';
+
+@import './utils/utils';
+
+@import './components/sections';
+@import './components/headers';
+@import './components/buttons';
+@import './components/hogwarts-figure-card';
+
+@import './layouts/hero-section';
+@import './layouts/hogwarts-figures-section';

@@ -5,9 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harry Potter</title>
 
+    <!-- <link rel="icon" type="image/x-icon" href="./images/title-logo.png"> -->
+
     <link rel="stylesheet" href="./css/main.min.css">
+
+    <script defer src="./js/hogwarts-figures-show.js"></script>
 </head>
 <body>
-    
+
+    <main>
+        <section class="hero-section section">
+            <div class="wrapper">
+                <h1 class="hero-section__header header">Ласкаво просимо у світ Гаррі Поттера</h1>
+                <button class="button button--accent" id="showFigures">Показати всіх персонажів</button>
+            </div>
+        </section>
+
+        <section class="hogwarts-figures-section" id="hogwartsFiguresSection">
+            <div class="wrapper">
+                <ul class="hogwarts-figures-section__list">
+                    <li class="hogwarts-figures-section__item">
+                        <div class="hogwarts-figure-card">
+                            <img class="hogwarts-figure-card__photo" 
+                            srcset="./images/students-list.jpg 1x, ./images/students-list@2x.jpg 2x"
+                            src="./images/students-list.jpg" alt="Students list">
+                            <button class="button">Студенти Гоґвортсу</button>
+                        </div> 
+                    </li>
+                    <li class="hogwarts-figures-section__item">
+                        <div class="hogwarts-figure-card">
+                            <img class="hogwarts-figure-card__photo" 
+                            srcset="./images/staff-list.jpg 1x, ./images/staff-list@2x.jpg 2x"
+                            src="./images/staff-list.jpg" alt="Staff list">
+                            <button class="button">Співробітники Гоґвортсу</button>
+                        </div>
+                    </li>
+                    <li class="hogwarts-figures-section__item">
+                        <div class="hogwarts-figure-card">
+                            <img class="hogwarts-figure-card__photo" 
+                            srcset="./images/characters-in-house-list.jpg 1x, ./images/characters-in-house-list@2x.jpg 2x"
+                            src="./images/characters-in-house-list.jpg" alt="Characters in house list">
+                            <button class="button">Персонажі в певному будинку</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

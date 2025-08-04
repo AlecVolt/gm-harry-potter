@@ -1,0 +1,25 @@
+.button {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 20px 36px;
+    border-radius: 100px;
+    background-color: transparent;
+    color: var(--color-brand-light);
+    border: 1px solid var(--color-brand-light);
+    transition: color .3s, background-color .3s;
+
+    &:hover {
+        background-color: var(--color-brand-light);
+        color: var(--color-primary-dark);
+    }
+
+    &--accent {
+        background-color: var(--color-brand-light);
+        color: var(--color-primary-dark);
+        
+        &:hover {
+            background-color: transparent;
+            color: var(--color-brand-light);
+        }
+    }
+}

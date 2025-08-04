@@ -1,0 +1,14 @@
+.hogwarts-figures-section {
+    position: relative;
+    //transform: translateY(-240px);
+    transition: transform .7s;
+
+    &__list {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__item {
+        width: calc((100% - 20px) / 3);
+    }
+}

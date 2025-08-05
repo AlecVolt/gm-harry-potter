@@ -1,0 +1,10 @@
+.hogwarts-characters-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__item {
+        width: calc(100% / 4 - 20px);
+    }
+}

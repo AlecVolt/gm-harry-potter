@@ -1,4 +1,7 @@
 .section {
     padding: 100px 0;
-    text-align: center;
+    
+    &--centered {
+        text-align: center;
+    }
 }

@@ -3,13 +3,10 @@ async function getCharacters (param, param2) {
 
     try {
         let response;
-        console.log(param, param2);
         if (param2) {
             response = await fetch(`https://hp-api.onrender.com/api/characters/${param}/${param2}`);
-            console.log('2 param');
         } else {
             response = await fetch(`https://hp-api.onrender.com/api/characters/${param}`);
-            console.log('1 param');
         }
 
         data = await response.json();
@@ -23,11 +20,37 @@ async function getCharacters (param, param2) {
 async function renderListItems (param, param2) {
     let characters = await getCharacters(param, param2);
 
-    showHeader(param);
-
     for (const character of characters) {
         createListItem(character);
     }
+}
+
+function selectHouseNavItem (e) {
+    let houseNavItem = e.target.closest('.house-nav__item');
+
+    if (!houseNavItem) return;
+
+    let selected = document.getElementById('houseNav').querySelector('.house-nav__item--active');
+
+    if (selected.id == houseNavItem.id) return;
+
+    selected.classList.remove('house-nav__item--active');
+    houseNavItem.classList.add('house-nav__item--active');
+
+    document.getElementById('hogwartsStudentsList').textContent = '';
+    renderListItems(param, houseNavItem.id);
+}
+
+function showHouseNav () {
+    let houseNav = document.getElementById('houseNav');
+
+    houseNav.style.display = 'flex';
+
+    houseNav.onmousedown = () => {
+        return false;
+    };
+
+    houseNav.addEventListener('click', selectHouseNavItem);
 }
 
 function showHeader (param) {
@@ -42,6 +65,7 @@ function showHeader (param) {
             break;
         case 'house':
             header.textContent = 'Персонажі в певному будинку';
+            showHouseNav();
             break;
     }
 }
@@ -186,6 +210,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const param = urlParams.get('param');
 const param2 = urlParams.get('param2');
 
+showHeader(param)
 renderListItems(param, param2);
 document.addEventListener('mouseover', showCardFlipSide);
 document.addEventListener('mouseout', hideCardFlipSide);

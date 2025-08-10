@@ -123,7 +123,7 @@ function createCharacterCardFrontSide (character) {
     characterInfo.textContent = 'Більше інформації';
     let arrow = document.createElement('img');
     arrow.classList.add('hogwarts-character-card__front-arrow');
-    arrow.src = '../images/arrow.svg';
+    arrow.src = './images/arrow.svg';
     arrow.alt = 'Character Info';
     characterInfo.append(arrow);
     characterCardFrontSide.append(characterInfo);

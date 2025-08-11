@@ -1,8 +1,18 @@
 .header {
-    font-size: 80px;
+    font-size: 40px;
     text-transform: uppercase;
     color: var(--color-accent-light);
     text-align: center;
     line-height: 1.5;
-    margin-bottom: 70px;
+    margin-bottom: 36px;
+
+    @media screen and (min-width: $bp-tablet) {
+        font-size: 60px;
+        margin-bottom: 54px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+        font-size: 80px;
+        margin-bottom: 70px;
+    }
 }

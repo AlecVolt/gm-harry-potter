@@ -1,12 +1,17 @@
 .button {
-    cursor: pointer;
-    font-size: 18px;
-    padding: 20px 36px;
+    cursor: pointer; 
+    font-size: 14px;
+    padding: 14px 24px;
     border-radius: 100px;
     background-color: transparent;
     color: var(--color-brand-light);
     border: 1px solid var(--color-brand-light);
     transition: color .3s, background-color .3s;
+
+    @media screen and (min-width: $bp-tablet) {
+        font-size: 18px;
+        padding: 20px 36px;
+    }
 
     &:hover {
         background-color: var(--color-brand-light);

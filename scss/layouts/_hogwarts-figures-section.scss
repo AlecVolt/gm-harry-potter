@@ -1,13 +1,34 @@
 .hogwarts-figures-section {
     position: relative;
     transition: transform .7s;
-
+ 
     &__list {
         display: flex;
-        gap: 20px;
+        gap: 40px;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            flex-wrap: nowrap;
+        }
     }
 
     &__item {
-        width: calc((100% - 20px) / 3);
+        width: calc(100% - 40px);
+
+        @media screen and (min-width: $bp-tablet) {
+            width: calc((100% - 20px) / 2);
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            width: calc((100% - 20px) / 3);
+        }
     }
 }

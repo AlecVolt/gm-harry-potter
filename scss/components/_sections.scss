@@ -1,5 +1,9 @@
 .section {
-    padding: 100px 0;
+    padding: 40px 0;
+
+    @media screen and (min-width: $bp-tablet) {
+        padding: 100px 0;
+    }
     
     &--centered {
         text-align: center;

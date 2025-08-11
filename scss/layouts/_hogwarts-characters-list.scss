@@ -2,9 +2,18 @@
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    //justify-content: space-between;
 
     &__item {
-        width: calc(100% / 4 - 20px);
+        width: calc(100% - 20px);
+
+        @media screen and (min-width: $bp-tablet) {
+            width: calc(100% / 3 - 20px);
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            width: calc(100% / 4 - 20px);
+        }
     }
 }

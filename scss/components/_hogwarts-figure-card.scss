@@ -4,6 +4,11 @@
     &__photo {
         border-radius: 20px;
         height: 400px;
-        margin-bottom: 28px;
+        margin-bottom: 20px;
+        width: 100%;
+
+        @media screen and (min-width: $bp-tablet) {
+            margin-bottom: 28px;
+        }
     }
 }

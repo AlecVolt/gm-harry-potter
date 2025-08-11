@@ -1,21 +1,39 @@
 .house-nav {
-    display: none;
-    //display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
+    display: none; 
+    margin-bottom: 36px;
+    flex-direction: column;
+    padding: 0 54px;
+    gap: 5px;
 
-    border: 1px solid var(--color-primary-light);
-    border-radius: 100px;
-
+    @media screen and (min-width: $bp-tablet) {
+        padding: 0;
+        margin-bottom: 50px;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 1px solid var(--color-primary-light);
+        border-radius: 100px;
+        gap: 0;
+    }
+ 
     &__item {
         cursor: pointer;
-        padding: 10px 76px;
         display: flex;
+        padding: 10px 76px;
         gap: 8px;
         align-items: center;
         color: var(--color-primary-light);
         text-decoration: none;
         text-transform: uppercase;
+        justify-content: center;
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 16px;
+            padding: 10px 24px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            padding: 10px 76px;
+        }
 
         &--active {
             color: var(--color-primary-dark);
@@ -25,8 +43,13 @@
         }
 
         &-icon {
-            width: 35px;
-            height: 38px;
+            width: 26px;
+            height: 26px;
+
+            @media screen and (min-width: $bp-desktop) {
+                width: 35px;
+                height: 38px;
+            }
         }
     }
 }

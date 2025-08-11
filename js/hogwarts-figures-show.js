@@ -7,11 +7,11 @@ function scrollToFigures () {
 function showFigures () {
     const coords = document.querySelector('.hero-section__header').getBoundingClientRect();
     const diff = (coords.bottom - coords.top) / 2;
-
-    if (pageYOffset >= diff - 10 && pageYOffset <= diff + 20) {
+    
+    if (pageYOffset >= diff - 10 && pageYOffset <= diff + 10) {
         scrollToFigures();
     }
-        
+    
 }
 
 function hideFigures () {
